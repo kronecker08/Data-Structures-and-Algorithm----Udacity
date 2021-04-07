@@ -18,7 +18,7 @@ for i in texts:
 for i in calls:
     list_of_phone_numbers.append(i[0])
     list_of_phone_numbers.append(i[1])
-print("Thera are {} different telephone numbers in the records".format(len(set(list_of_phone_numbers))))
+print("There are", len(set(list_of_phone_numbers)),"different telephone numbers in the records")
 """
 TASK 1:
 How many different telephone numbers are there in the records? 

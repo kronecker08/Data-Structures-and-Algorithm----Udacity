@@ -11,10 +11,9 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 # First record of texts
-## Here we are accessing a element from the list 
+print("First record of texts,",texts[0][0], "texts", texts[0][1],"at time", texts[0][2])
+print("Last record of calls,", calls[-1][0], "calls", calls[-1][1], "at time", calls[-1][2],", lasting", calls[-1][3],"seconds")
 
-print("First record of texts, {} texts {} at time {}".format(texts[0][0], texts[0][1], texts[0][2]))
-print("Last record of calls, {} calls {} at time {}, lasting {}, seconds".format(calls[-1][0], calls[-1][1], calls[-1][2], calls[-1][3]))
 
 """
 TASK 0:

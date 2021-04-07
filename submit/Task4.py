@@ -32,16 +32,15 @@ for i in texts:
 num_texts = set(num_texts)
 
 
-# telemarketers = []
-# for i in call_outgoing:
-#     if i in call_incoming:
-#         continue
-#     elif i in num_texts:
-#         continue
-#     else:
-#         telemarketers.append(i)
+telemarketers = []
+for i in call_outgoing:
+    if i in call_incoming:
+        continue
+    elif i in num_texts:
+        continue
+    else:
+        telemarketers.append(i)
 
-telemarketers = call_outgoing - (call_incoming | num_texts )
 telemarketers = sorted(telemarketers)
 
 print("These numbers could be telemarketers: ")

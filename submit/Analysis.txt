@@ -1,0 +1,51 @@
+#JSS
+
+Problem 0) 
+In this problem we are trying to access the elements from the list.
+The worst case complexity to access an element is O(1).
+In the problem we are trying to access two elements, but it does not affects the complexity.
+
+ans)--> O(1)
+
+Problem 1)
+In this problem there is a for loop which loops over each call complexity is O(n).
+Then there is again a for loop which loops over each call complexity is O(n).
+Then theres is conversion from list to set O(n).
+
+ans)--> O(n)
+
+
+Problem 2) 
+
+There is a for loop which loops over each call complexity O(n).
+Then there is a conversion from list to set complexity O(n).
+Then again a for loop complexity is O(n)
+Then there is a for loop inside a for loop complexity is O(n^2)
+Then there is a for loop O(n)
+Then there is finding max complexity is O(n)
+
+ans)--> O(n^2)
+
+Problem 3)
+
+-->Part A
+There is for loop which loops over each call complexity O(n).
+Then there is a sorted function complexity is O(nlog(n)).
+
+ans)--> O(nlog(n))
+
+-->Part B
+There is for loop which loops over each call complexity O(n).
+Then there is again a for loop complexity is O(n).
+
+ans)--> O(n)
+
+Problem 4)
+There is for loop which loops over each call complexity O(n).
+Then there is a conversion from list to set complexity O(n).
+There is for loop which loops over each text complexity O(n).
+Then there is a conversion from list to set complexity O(n).
+Then there is a for loop with a if statement which checks in the list complexity is O(n^2).
+Then there is a sorted function complexity is O(nlog(n)).
+
+ans) --> O(n^2)

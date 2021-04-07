@@ -11,30 +11,22 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
-list_of_phone_on_call = []
+
+dict_of_phone_number = dict()
+
 for i in calls:
-    list_of_phone_on_call.append(i[0])
-    list_of_phone_on_call.append(i[1])
-phone_numbers = set(list_of_phone_on_call)
+    if i[0] in dict_of_phone_number:
+        dict_of_phone_number[i[0]] += int(i[3])
+    else:
+        dict_of_phone_number[i[0]] = int(i[3])
+    if i[1] in dict_of_phone_number:
+        dict_of_phone_number[i[1]] += int(i[3])
+    else:
+        dict_of_phone_number[i[1]] = int(i[3])
 
-dict_of_phone_number = {}
-
-for i in phone_numbers:
-    dict_of_phone_number[i] = 0
-
-for i in dict_of_phone_number:
-    for j in calls:
-        if i == j[0] or i == j[1]:
-            # print(j[3])
-            dict_of_phone_number[i]= dict_of_phone_number[i] + int(j[3]) 
-time_spent = []
-number = []
-for k in dict_of_phone_number:
-    time_spent.append(dict_of_phone_number[k])
-    number.append(k)
-
-max_index = time_spent.index(max(time_spent))
-print(number[max_index], "spent the longest time", max(time_spent), "seconds, on the phone during September 2016")
+num_long_time = max(dict_of_phone_number, key= dict_of_phone_number.get)
+long_time = dict_of_phone_number[num_long_time]
+print("{} spent the longest time {} seconds, on the phone in September 2016".format(num_long_time, long_time))
 
 
 """
